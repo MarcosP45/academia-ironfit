@@ -54,6 +54,8 @@ public class DataSeeder implements CommandLineRunner {
 
         Plano mensal = planoRepository.save(new Plano("Mensal",
                 "Acesso livre à musculação e aulas coletivas, sem fidelidade.", new BigDecimal("129.90"), 1));
+        planoRepository.save(new Plano("Bimestral",
+                "Musculação + aulas coletivas com 2 meses de fidelidade.", new BigDecimal("129.90"), 2));
         Plano trimestral = planoRepository.save(new Plano("Trimestral",
                 "Musculação + aulas coletivas com 3 meses de fidelidade.", new BigDecimal("114.90"), 3));
         Plano semestral = planoRepository.save(new Plano("Semestral",
