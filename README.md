@@ -13,3 +13,10 @@ mvn spring-boot:run
 ```
 
 Depois acesse http://localhost:8080. O banco é criado sozinho, já com dados de exemplo.
+
+## Grupo
+
+Luiz Fernando Ibrahim Rebello Cabral - 202010081
+Marcos Paulo Chagas Severiano de Souza - 202310779
+Juan Filipe Rangel - 202313159
+Pedro Henrique Guimarães Pavanello - 202310824
