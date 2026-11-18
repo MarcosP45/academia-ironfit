@@ -122,6 +122,7 @@ th, td { padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--bo
 th { font-size: 12px; text-transform: uppercase; letter-spacing: .4px; color: var(--texto-3); font-weight: 600; background: #fafbfc; }
 tbody tr:hover { background: #fafbfc; }
 tbody tr:last-child td { border-bottom: 0; }
+td.centro, th.centro { text-align: center; white-space: nowrap; }
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 td .acoes { flex-wrap: nowrap; }
 .nome-cel strong { display: block; }

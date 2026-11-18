@@ -15,9 +15,9 @@ const Avaliacoes = {
         </div>
         <div id="evolucao"></div>
         <div class="card mt"><div class="tabela-wrap"><table>
-            <thead><tr><th>Data</th><th>Aluno</th><th class="num">Peso</th><th class="num">Altura</th><th>IMC</th>
+            <thead><tr><th>Data</th><th>Aluno</th><th class="num">Peso</th><th class="num">Altura</th><th class="num">IMC</th><th class="centro">Classificação</th>
                 <th class="num">% Gordura</th><th class="num">Massa magra</th><th class="num">RCQ</th><th>Avaliador</th><th></th></tr></thead>
-            <tbody id="lista-aval"><tr><td colspan="10" class="carregando">Carregando…</td></tr></tbody>
+            <tbody id="lista-aval"><tr><td colspan="11" class="carregando">Carregando…</td></tr></tbody>
         </table></div></div>`;
         document.getElementById('filtro-aluno-aval').onchange = e => { this.alunoId = e.target.value; this.carregar(); };
         await this.carregar();
@@ -45,7 +45,8 @@ const Avaliacoes = {
                 <td>${esc(a.alunoNome)}</td>
                 <td class="num">${fmt.num(a.peso, 1, ' kg')}</td>
                 <td class="num">${fmt.num(a.altura, 2, ' m')}</td>
-                <td><strong>${fmt.num(a.imc, 1)}</strong> <span class="badge ${this.classeImc(a.classificacaoImc)}">${esc(a.classificacaoImc)}</span></td>
+                <td class="num"><strong>${fmt.num(a.imc, 1)}</strong></td>
+                <td class="centro"><span class="badge ${this.classeImc(a.classificacaoImc)}">${esc(a.classificacaoImc)}</span></td>
                 <td class="num">${fmt.num(a.percentualGordura, 1, '%')}</td>
                 <td class="num">${fmt.num(a.massaMagra, 1, ' kg')}</td>
                 <td class="num">${fmt.num(a.relacaoCinturaQuadril, 2)}</td>
@@ -55,7 +56,7 @@ const Avaliacoes = {
                     <button class="btn btn-sm" data-editar="${a.id}">Editar</button>
                     <button class="btn btn-sm btn-perigo" data-excluir="${a.id}" title="Excluir" aria-label="Excluir"><svg class="icone" aria-hidden="true"><use href="#i-lixeira"/></svg></button>
                 </div></td>
-            </tr>`).join('') : tabelaVazia(10, 'Nenhuma avaliação registrada.');
+            </tr>`).join('') : tabelaVazia(11, 'Nenhuma avaliação registrada.');
 
         const porId = id => lista.find(a => a.id == id);
         tbody.querySelectorAll('[data-ver]').forEach(b => b.onclick = () => this.detalhar(porId(b.dataset.ver)));
