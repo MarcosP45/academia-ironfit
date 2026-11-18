@@ -1,0 +1,4 @@
+node_modules/
+resultados/artefatos/
+test-results/
+playwright-report/

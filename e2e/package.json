@@ -1,0 +1,20 @@
+{
+  "name": "ironfit-e2e",
+  "version": "1.0.0",
+  "description": "Testes de navegador (Playwright) do IronFit",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:visual": "playwright test --headed",
+    "relatorio": "node gerar-relatorio.mjs",
+    "ver-relatorio-html": "playwright show-report resultados/html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1"
+  },
+  "private": true
+}

@@ -1,0 +1,14 @@
+target/
+data/
+.idea/
+*.iml
+out/
+.DS_Store
+
+# Dependencias e artefatos locais
+node_modules/
+e2e/resultados/
+e2e/test-results/
+e2e/playwright-report/
+*.zip
+*.log
